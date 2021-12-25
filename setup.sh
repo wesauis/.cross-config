@@ -14,11 +14,14 @@ YELLOW=$(printf '\033[33m')
 CYAN=$(printf '\033[36m')
 BOLD=$(printf '\033[1m')
 RESET=$(printf '\033[m')
+DIMMED=$(printf '\033[30;1m')
 
 log() { 
-    if [[ ! -z ${TASKNAME+x} ]];
+    if [[ ! -z $TASKNAME ]];
     then 
         prefix="[$TASKNAME]$RESET "
+    else
+        prefix=''
     fi
 
     case $1 in 
@@ -34,13 +37,16 @@ log() {
     fi
 
     printf '\033[K'
-    echo "$color${prefix:-}$@$RESET" 
+    echo "$color$prefix$@$RESET" 
 }
 
 # especial characters work, i love it :)
 alias info?='log info'
 alias warn?='log warn'
 alias error?='log error'
+dim() {
+    echo -n $DIMMED$@$RESET
+}
 
 wait_job() {
     pid=$!
@@ -111,7 +117,7 @@ for setup_script in $setup_scripts/*.sh; do
     filename=$(basename $setup_script)
     taskname="${filename/.sh/}"
 
-    info? setting up $taskname
+    TASKNAME= info? setting up $taskname
     chmod u+x $setup_script
     TASKNAME="setup/$taskname" source "$setup_script"
 done
