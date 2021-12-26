@@ -62,11 +62,11 @@ wait_job() {
         "    $B  $R" 
         "      $B    $R" 
         "          $B     $R" 
-        "               $B        $R" 
-        "                       $B     $R" 
-        "                            $B    $R" 
-        "                                $B  $R" 
-        "                                   $B $R" 
+        "              $B        $R" 
+        "                    $B     $R" 
+        "                         $B    $R" 
+        "                             $B  $R" 
+        "                               $B $R" 
     )
 
     while [[ $(ps --pid $pid | wc -l) > 1 ]]; do
