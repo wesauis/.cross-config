@@ -41,7 +41,6 @@ rm ~/.zshrc
 ln -s $(realpath config/.zshrc) ~/.zshrc
 
 
-info? setting zsh as the default shell
-sudo chsh -s $(which zsh)
-sudo -u $USER chsh -s $(which zsh)
+info? setting zsh as the default shell for the user $USER
+chsh -s $(which zsh)
 
