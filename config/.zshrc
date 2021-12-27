@@ -101,37 +101,37 @@ SPACESHIP_PROMPT_ORDER=(
 )
 # right side
 SPACESHIP_RPROMPT_ORDER=(
-  package       # Package version
-  gradle        # Gradle section
-  maven         # Maven section
-  node          # Node.js section
-  ruby          # Ruby section
-  elixir        # Elixir section
-  # xcode         # Xcode section
-  # swift         # Swift section
-  golang        # Go section
-  php           # PHP section
-  rust          # Rust section
-  # haskell       # Haskell Stack section
-  # julia         # Julia section
-  docker        # Docker section
-  # aws           # Amazon Web Services section
-  # gcloud        # Google Cloud Platform section
-  venv          # virtualenv section
-  # conda         # conda virtualenv section
-  pyenv         # Pyenv section
-  dotnet        # .NET section
-  # ember         # Ember.js section
-  kubectl       # Kubectl context section
-  # terraform     # Terraform workspace section
-  # ibmcloud      # IBM Cloud section
-  exec_time     # Execution time
-  time          # Time stamps section
-  git           # Git section (git_branch + git_status)
-  # hg            # Mercurial section (hg_branch  + hg_status)
-  battery       # Battery level and status
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
+  package::async       # Package version
+  gradle::async        # Gradle section
+  maven::async         # Maven section
+  node::async          # Node.js section
+  ruby::async          # Ruby section
+  elixir::async        # Elixir section
+  xcode::async         # Xcode section
+  swift::async         # Swift section
+  golang::async        # Go section
+  php::async           # PHP section
+  rust::async          # Rust section
+  haskell::async       # Haskell Stack section
+  julia::async         # Julia section
+  docker::async        # Docker section
+  aws::async           # Amazon Web Services section
+  gcloud::async        # Google Cloud Platform section
+  venv::async          # virtualenv section
+  conda::async         # conda virtualenv section
+  pyenv::async         # Pyenv section
+  dotnet::async        # .NET section
+  ember::async         # Ember.js section
+  kubecontext::async   # Kubectl context section
+  terraform::async     # Terraform workspace section
+  ibmcloud::async      # IBM Cloud section
+  exec_time::async     # Execution time
+  time::async          # Time stamps section
+  git::async           # Git section (git_branch + git_status)
+  hg::async            # Mercurial section (hg_branch  + hg_status)
+  battery::async       # Battery level and status
+  jobs::async          # Background jobs indicator
+  exit_code::async     # Exit code section
 )
 SPACESHIP_CHAR_SYMBOL='->> '
 SPACESHIP_CHAR_SYMBOL_ROOT='=|# '
